@@ -1,0 +1,59 @@
+﻿@model BankaAPI.Models.Odemeler
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Odemeler</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="OdemeId" />
+            <div class="form-group">
+                <label asp-for="MusteriNo" class="control-label"></label>
+                <input asp-for="MusteriNo" class="form-control" />
+                <span asp-validation-for="MusteriNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuncelOdemeTutari" class="control-label"></label>
+                <input asp-for="GuncelOdemeTutari" class="form-control" />
+                <span asp-validation-for="GuncelOdemeTutari" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GuncelBorcTutari" class="control-label"></label>
+                <input asp-for="GuncelBorcTutari" class="form-control" />
+                <span asp-validation-for="GuncelBorcTutari" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SonOdemeTarihi" class="control-label"></label>
+                <input asp-for="SonOdemeTarihi" class="form-control" />
+                <span asp-validation-for="SonOdemeTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GecikmisBorcTutari" class="control-label"></label>
+                <input asp-for="GecikmisBorcTutari" class="form-control" />
+                <span asp-validation-for="GecikmisBorcTutari" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OdenmisBorcTutari" class="control-label"></label>
+                <input asp-for="OdenmisBorcTutari" class="form-control" />
+                <span asp-validation-for="OdenmisBorcTutari" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
