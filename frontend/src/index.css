@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Ziraat Bank Red & White Theme */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    /* Ziraat Bank Red Primary */
+    --primary: 0 85% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 0 85% 45%;
+
+    /* Light Gray Secondary */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Success Green for Payments */
+    --success: 142 76% 47%;
+    --success-foreground: 0 0% 100%;
+
+    /* Red accent */
+    --accent: 0 85% 96%;
+    --accent-foreground: 0 85% 50%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 85% 50%;
+
+    /* Enhanced radius for modern look */
+    --radius: 0.75rem;
+
+    /* Ziraat Bank Red Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 85% 50%), hsl(0 85% 60%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 47%), hsl(142 76% 57%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
+
+    /* Professional Shadows */
+    --shadow-card: 0 2px 8px -2px hsl(220 13% 91% / 0.5);
+    --shadow-dialog: 0 25px 50px -12px hsl(220 13% 91% / 0.8);
+
+    /* Smooth Transitions */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 85% 50%;
+
+    --sidebar-foreground: 0 0% 100%;
+
+    --sidebar-primary: 0 0% 100%;
+
+    --sidebar-primary-foreground: 0 85% 50%;
+
+    --sidebar-accent: 0 85% 96%;
+
+    --sidebar-accent-foreground: 0 85% 50%;
+
+    --sidebar-border: 0 0% 90%;
+
+    --sidebar-ring: 0 85% 50%;
+  }
+
+  .dark {
+    --background: 215 28% 9%;
+    --foreground: 220 14% 96%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 220 14% 96%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 220 14% 96%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 65%;
+
+    --secondary: 215 25% 16%;
+    --secondary-foreground: 220 14% 96%;
+
+    --muted: 215 25% 16%;
+    --muted-foreground: 215 13% 65%;
+
+    --success: 142 76% 47%;
+    --success-foreground: 0 0% 100%;
+
+    --accent: 215 25% 16%;
+    --accent-foreground: 217 91% 60%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 18%;
+    --input: 215 25% 18%;
+    --ring: 217 91% 60%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 70%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 47%), hsl(142 76% 57%));
+    --gradient-card: linear-gradient(180deg, hsl(215 25% 12%), hsl(215 25% 14%));
+
+    --shadow-card: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-dialog: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

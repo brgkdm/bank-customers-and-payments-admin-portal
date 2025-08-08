@@ -1,0 +1,27 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" fill="#ffffff" rx="2"/>
+  
+  <!-- Bank building base -->
+  <rect x="3" y="25" width="26" height="5" fill="#1e40af" rx="0.5"/>
+  
+  <!-- Bank columns -->
+  <rect x="6" y="13" width="2.5" height="12" fill="#3b82f6"/>
+  <rect x="10.5" y="13" width="2.5" height="12" fill="#3b82f6"/>
+  <rect x="15" y="13" width="2.5" height="12" fill="#3b82f6"/>
+  <rect x="19.5" y="13" width="2.5" height="12" fill="#3b82f6"/>
+  <rect x="24" y="13" width="2.5" height="12" fill="#3b82f6"/>
+  
+  <!-- Bank roof/triangle -->
+  <path d="M5 13L16 6L27 13H5Z" fill="#1e40af"/>
+  
+  <!-- Bank entrance -->
+  <rect x="14" y="19" width="4" height="6" fill="#1e3a8a"/>
+  
+  <!-- Steps -->
+  <rect x="5" y="23" width="22" height="2" fill="#6b7280"/>
+  
+  <!-- Dollar sign in entrance -->
+  <circle cx="16" cy="21.5" r="1.2" fill="#fbbf24"/>
+  <text x="16" y="23" text-anchor="middle" font-family="Arial" font-size="2" font-weight="bold" fill="#92400e">$</text>
+</svg>
