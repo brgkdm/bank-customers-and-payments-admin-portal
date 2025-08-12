@@ -6,7 +6,7 @@ Full‑stack monorepo for managing bank customers and payment records.
 
 This README covers local setup, configuration, how to run, and key API endpoints.
 
-## 🧭 Repository layout
+## Repository layout
 
 ```
 backend/
@@ -18,13 +18,13 @@ database/
 LICENSE
 ```
 
-## ✅ Prerequisites
+## Prerequisites
 
 - .NET SDK 8.0+
 - SQL Server (Express or Developer) + SQL Server Management Studio (optional)
 - Node.js 18+ and npm (or bun/pnpm if you prefer)
 
-## ⚙️ Configuration
+## Configuration
 
 - Connection string name used by the API: `BankaDb`.
   - Set it in `backend/BankaAPI/appsettings.Development.json` (recommended for local dev).
@@ -45,7 +45,7 @@ LICENSE
   - Default: `https://localhost:7205/api`
   - If your API runs on a different port/origin, update this constant.
 
-## 🚀 Quick start (local)
+## Quick start (local)
 
 Follow these steps in order.
 
@@ -80,7 +80,7 @@ npm run dev
 ```
 The app will start at `http://localhost:8080` and call the API at `https://localhost:7205/api`.
 
-## 🔌 API overview
+## API overview
 
 Base URL (local): `https://localhost:7205/api`
 
@@ -133,14 +133,14 @@ Base URL (local): `https://localhost:7205/api`
 
 Explore the full schema and try endpoints via Swagger UI at `/swagger`.
 
-## 🗄️ Database objects
+## Database objects
 
 `database/script.sql` creates:
 - Tables: `Musteriler`, `Odemeler`, `OdemeLog` (with FKs and defaults)
 - Procedures (examples): `MusteriGetirBySube`, `sp_MusteriDetayGetir`, `sp_MusteriEkle`, `sp_MusteriGuncelle`, `sp_MusteriSil`, `sp_OdemeAl`, `sp_OdemeDetayGetir`, `sp_OdemeIadeEt`, `sp_OdemesiGecikenleriGetir`
 - EF decimal precisions are enforced via migrations in `backend/BankaAPI/Migrations`
 
-## 🔧 Tips & troubleshooting
+## Tips & troubleshooting
 
 - If the frontend can’t reach the API:
   - Ensure the API runs on `https://localhost:7205` (or update `frontend/src/lib/api.ts`).
@@ -150,11 +150,11 @@ Explore the full schema and try endpoints via Swagger UI at `/swagger`.
   - For local dev, `Trusted_Connection=True;TrustServerCertificate=True;` is convenient.
 - Trust the HTTPS dev cert once on Windows: `dotnet dev-certs https --trust`.
 
-## 🧰 Tech stack
+## Tech stack
 
 - Backend: ASP.NET Core 8, EF Core 9 (SqlServer), Swagger
 - Frontend: React 18, Vite 5, TypeScript, Tailwind CSS, shadcn/ui, Radix UI, TanStack Query, Axios
 
-## 📜 License
+## License
 
 This project is licensed under the terms of the license in `Apache 2.0`.
