@@ -158,3 +158,24 @@ Explore the full schema and try endpoints via Swagger UI at `/swagger`.
 ## License
 
 This project is licensed under the terms of the license in `Apache 2.0`.
+
+## Clean install checklist (another machine)
+
+Follow these steps to validate a fresh setup on a different environment:
+
+1) Prereqs: Install .NET 8 SDK, SQL Server (Express/Developer), Node.js 18+.
+2) Clone and open this repo.
+3) Database:
+  - Prefer the EF route: set `ConnectionStrings:BankaDb` and run `dotnet ef database update` in `backend/BankaAPI`.
+  - Or use `database/script.sql`. If it fails due to MDF/LDF paths, either update the paths or simplify to `CREATE DATABASE [BankaDB];` and run the rest under `USE [BankaDB]`.
+4) Backend:
+  - Ensure `appsettings.Development.json` or `appsettings.json` contains a valid `BankaDb` connection string.
+  - Trust dev cert once: `dotnet dev-certs https --trust`.
+  - Run: `dotnet run --launch-profile https` in `backend/BankaAPI`.
+5) Frontend:
+  - `cd frontend && npm install && npm run dev`.
+  - If API origin differs, update `frontend/src/lib/api.ts` baseURL.
+6) CORS:
+  - If your frontend runs on a different origin/port, add it to the CORS policy `AllowReactApp` in `Program.cs`.
+
+Report back with any errors, unclear steps, or missing details.
